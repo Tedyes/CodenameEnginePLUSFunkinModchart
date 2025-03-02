@@ -2,8 +2,8 @@
 <project>
 	<!-- _________________________ Application Settings _________________________ -->
 	<app
-		title="Friday Night Funkin' - Codename Engine" main="funkin.backend.system.Main"
-		file="CodenameEngine" packageName="com.yoshman29.codenameengine"
+		title="Friday Night Funkin' - Codename EngineFM" main="funkin.backend.system.Main"
+		file="CodenameEngineFM" packageName="com.yoshman29.codenameengine"
 		package="com.yoshman29.codenameengine"
 		version="0.1.0" company="Yoshman29" />
 
@@ -202,7 +202,6 @@
 
 	<haxeflag name="--macro" value="funkin.backend.system.macros.Macros.initMacros()" />
 
-	<!-- Fix compiling issues -->
 	<setenv name="HAXEPATH" value="./"/>
 
 	<haxedef name="HXCPP_CHECK_POINTER" if="release" />
@@ -211,4 +210,11 @@
 	<haxedef name="HXCPP_CATCH_SEGV" />
 
 	<haxedef name="hscriptPos" /> <!-- for logging -->
+
+	<!-- FunkinModchart -->
+	<haxedef name="FM_ENGINE" value="CODENAME"/>
+	<haxedef name="FM_ENGINE_VERSION" value=""/>
+
+	<haxelib name="funkin-modchart" />
+	<haxeflag name="--macro" value="modchart.core.macros.Macro.includeFiles()"/>
 </project>

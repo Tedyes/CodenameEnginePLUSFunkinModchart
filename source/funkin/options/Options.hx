@@ -119,6 +119,8 @@ class Options
 	public static var SOLO_RESET(get, null):Array<FlxKey>;
 	public static var SOLO_SWITCHMOD(get, null):Array<FlxKey>;
 
+	public static var modchartingHoldSubdivisions = 4;
+
 	public static function load() {
 		if (__save == null) __save = new FlxSave();
 		__save.bind("options", "CodenameEngine");
